@@ -17,8 +17,8 @@ guess = input("Guess a letter: ").lower()
 
 for char in chosen_word:
     if guess == char:
-        print(char)
+        print(char, end="")
     else:
-        print("_")
+        print("_", end="")
 
 print(display)
