@@ -1,25 +1,27 @@
 import random
 
-word_list = ["aardvark", "baboon", "camel"]
-placeholder = ""
-display = ""
 
+word_list = ["aardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
-for letter in chosen_word:
-    print("_", end="")
+placeholder = ""
+word_length = len(chosen_word)
+for index in range(word_length):
+    placeholder += "_"
+print(placeholder)
 
-print("")
-while display <= chosen_word:
-    guess = input("Guess a letter: ").lower()
 
+guess = input("Guess a letter: ").lower()
+
+
+display = ""
 for char in chosen_word:
     if guess == char:
-        print(char, end="")
+        display += char
     else:
-        print("_", end="")
+        display += "_"
 
 
 print(display)
