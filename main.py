@@ -12,13 +12,14 @@ for letter in chosen_word:
     print("_", end="")
 
 print("")
-guess = input("Guess a letter: ").lower()
-
+while display <= chosen_word:
+    guess = input("Guess a letter: ").lower()
 
 for char in chosen_word:
     if guess == char:
         print(char, end="")
     else:
         print("_", end="")
+
 
 print(display)
