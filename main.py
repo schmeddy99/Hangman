@@ -1,16 +1,24 @@
 import random
 
 word_list = ["aardvark", "baboon", "camel"]
+placeholder = ""
+display = ""
 
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
+for letter in chosen_word:
+    print("_", end="")
+
+print("")
 guess = input("Guess a letter: ").lower()
-print(guess)
+
 
 for char in chosen_word:
     if guess == char:
-        print("Right")
+        print(char)
     else:
-        print("Wrong")
+        print("_")
+
+print(display)
